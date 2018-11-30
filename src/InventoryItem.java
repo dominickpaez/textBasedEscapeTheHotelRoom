@@ -1,2 +1,2 @@
-public class InventoryItem extends SideObject {
+public class InventoryItem extends Object {
 }
