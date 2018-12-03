@@ -8,11 +8,15 @@ public class EscapeTheRoom {
         System.out.println("You awaken in a barren room. You look out the window and you are in a highriser hotel.\nThe bedroom contains a; bed, nightstand, tv stand, the front door, and the bathroom door.");
 
         //Initialize objects
+        Entity bed = new Entity();
         Object pillow = new Object();
         InventoryItem note1 = new InventoryItem();
         Object[][] bedObjects ={{pillow},{note1}};
-        Inventory bedInv = new Inventory();
-        Entity bed = new Entity("bed",bedInv);
+        Inventory bedInv = new Inventory(bedObjects,bed);
+        bed = new Entity("bed",bedInv);
+
+        System.out.println(bedInv);
+
 
 
         
