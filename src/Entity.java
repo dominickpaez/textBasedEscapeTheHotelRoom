@@ -11,5 +11,19 @@ public class Entity {
         inventory = i;
     }
 
+    public void performAction(){
+        System.out.println(inventory.tostring());
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String toString() {
+        return (name);
+    }
 }
