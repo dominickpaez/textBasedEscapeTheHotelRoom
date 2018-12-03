@@ -5,4 +5,12 @@ public class Inventory {
         inv = x;
         owner = y;
     }
+
+
+    public String toString() {
+        String
+        for(int i = 0;i < inv.length;i++){
+
+        }
+    }
 }
