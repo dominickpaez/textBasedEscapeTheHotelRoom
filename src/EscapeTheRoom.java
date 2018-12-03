@@ -14,8 +14,38 @@ public class EscapeTheRoom {
         Inventory bedInv = new Inventory();
         Entity bed = new Entity("bed",bedInv);
 
+        Object drawer = new Object();
+        InventoryItem note2 = new InventoryItem();
+        Object[][] standObjects ={{drawer},{note2}};
+        Inventory standInv = new Inventory();
+        Entity stand = new Entity("Nightstand",standInv);
 
-        
+        Object lamp = new Object();
+        InventoryItem socket = new InventoryItem();
+        InventoryItem rod = new InventoryItem();
+        InventoryItem cord = new InventoryItem();
+        Object[][] tvstandObjects ={{lamp},{socket,rod,cord}};
+        Inventory tvstandInv = new Inventory();
+        Entity tvstand = new Entity("TV Stand",tvstandInv);
+
+        Object cupboard = new Object();
+        InventoryItem note3 = new InventoryItem();
+        Object[][] doorObject ={{drawer},{note2}};
+        Inventory doorInv = new Inventory();
+        Entity door = new Entity("Front Door",doorInv);
+
+        Object keyLock = new Object();
+        InventoryItem note4 = new InventoryItem();
+        Object[][] bathdoorObjects ={{drawer},{note2}};
+        Inventory bathdoorInv = new Inventory();
+        Entity bathdoor = new Entity("Bathroom Door",bathdoorInv);
+
+        Object cupboard = new Object();
+        InventoryItem note2 = new InventoryItem();
+        Object[][] standObjects ={{drawer},{note2}};
+        Inventory standInv = new Inventory();
+        Entity stand = new Entity("Nightstand",standInv);
+
         boolean x = false;
         while (!x){
             x = promptUser(scan);
