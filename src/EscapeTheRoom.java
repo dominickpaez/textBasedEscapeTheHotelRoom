@@ -41,8 +41,8 @@ public class EscapeTheRoom {
         Entity bathdoor = new Entity("Bathroom Door",bathdoorInv);
 
         Object cupboard = new Object();
-        InventoryItem note2 = new InventoryItem();
-        Object[][] standObjects ={{drawer},{note2}};
+        InventoryItem note5 = new InventoryItem();
+        Object[][] sinkObjects ={{drawer},{note2}};
         Inventory standInv = new Inventory();
         Entity stand = new Entity("Nightstand",standInv);
 
