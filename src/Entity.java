@@ -1,6 +1,6 @@
 public class Entity {
     private String name;
-    Inventory inventory;
+    private Inventory inventory;
 
     public Entity(){
         name = "Default";
@@ -9,10 +9,6 @@ public class Entity {
     public Entity(String n,Inventory i){
         name = n;
         inventory = i;
-    }
-
-    public void performAction(){
-        System.out.println(inventory.tostring());
     }
 
     public String getName() {
@@ -25,5 +21,9 @@ public class Entity {
 
     public String toString() {
         return (name);
+    }
+
+    public String getImmediateInventory(){
+        return(inventory.entityToString());
     }
 }
