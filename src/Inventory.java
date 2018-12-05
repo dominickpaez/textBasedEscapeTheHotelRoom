@@ -6,11 +6,18 @@ public class Inventory {
         owner = y;
     }
 
-
-    public String toString() {
-        String
-        for(int i = 0;i < inv.length;i++){
-
+    public String entityToString() {
+        String x = "";
+        for(int i = 0;i < inv.length-1;i++){
+            x += (inv[i][0]);
         }
+        return x;
+    }
+    public String objectToString() {
+        String x = "";
+        for(int i = 0;i < inv.length-1;i++){
+            x += (inv[i][1]);
+        }
+        return x;
     }
 }
