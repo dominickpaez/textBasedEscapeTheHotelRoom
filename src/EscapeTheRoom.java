@@ -18,25 +18,32 @@ public class EscapeTheRoom {
 
 
         Entity stand = new Entity();
-        Object drawer = new Object("drawer");
         InventoryItem note2 = new InventoryItem();
-        Object[][] standObjects ={{drawer},{note2}};
-        Inventory standInv = new Inventory(standObjects,stand);
+        InventoryItem[] drawerItems = {note2};
+        Inventory drawerInv = new Inventory(drawerItems);
+        Object drawer = new Object("drawer",drawerInv);
+        Object[] standObjects ={drawer};
+        Inventory standInv = new Inventory(standObjects);
         stand = new Entity("Nightstand",standInv);
 
         Entity tvstand = new Entity();
-        Object lamp = new Object("lamp");
         InventoryItem socket = new InventoryItem();
-        InventoryItem rod = new InventoryItem();
-        InventoryItem cord = new InventoryItem();
-        Object[][] tvstandObjects ={{lamp},{socket,rod,cord}};
-        Inventory tvstandInv = new Inventory(tvstandObjects,tvstand);
+        InventoryItem metalRod = new InventoryItem();
+        InventoryItem extensionCord = new InventoryItem();
+        InventoryItem[] lampItems = {socket, metalRod, extensionCord};
+        Inventory lampInv = new Inventory(lampItems);
+        Object lamp = new Object("lamp",lampInv);
+        Object[] tvstandObjects ={lamp};
+        Inventory tvstandInv = new Inventory(tvstandObjects);
         tvstand = new Entity("TV Stand",tvstandInv);
 
         Entity door = new Entity();
-        Object keyCodeLock = new Object("keyCodeLock");
-        Object[][] doorObject ={{keyCodeLock}};
-        Inventory doorInv = new Inventory(doorObject,door);
+        InventoryItem  = new InventoryItem();
+        InventoryItem[] drawerItems = {note2};
+        Inventory drawerInv = new Inventory(drawerItems);
+        Object drawer = new Object("drawer",drawerInv);
+        Object[] standObjects ={drawer};
+        Inventory standInv = new Inventory(standObjects);
         door = new Entity("Front Door",doorInv);
 
         Entity bathdoor = new Entity();
@@ -46,10 +53,12 @@ public class EscapeTheRoom {
         bathdoor = new Entity("Bathroom Door",bathdoorInv);
 
         Entity sink = new Entity();
-        Object cupboard = new Object("cupboard");
         InventoryItem lockBreaker = new InventoryItem();
-        Object[][] sinkObjects ={{cupboard},{lockBreaker}};
-        Inventory sinkInv = new Inventory(sinkObjects,sink);
+        InventoryItem[] cupboardItems = {lockBreaker};
+        Inventory cupboardInv = new Inventory(cupboardItems);
+        Object cupboard = new Object("cupboard",cupboardInv);
+        Object[] sinkObjects ={cupboard};
+        Inventory sinkInv = new Inventory(sinkObjects);
         sink = new Entity("Sink",sinkInv);
 
         String[] entityNameList = {"bed","nightstand","tvStand","frontDoor","bathroomDoor"};
