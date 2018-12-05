@@ -8,10 +8,12 @@ public class EscapeTheRoom {
 
         //Initialize objects
         Entity bed = new Entity();
-        Object pillow = new Object("pillow");
         InventoryItem note1 = new InventoryItem();
-        Object[][] bedObjects ={{pillow},{note1}};
-        Inventory bedInv = new Inventory(bedObjects,bed);
+        InventoryItem[] pillowItems = {note1};
+        Inventory pillowInv = new Inventory(pillowItems);
+        Object pillow = new Object("pillow",pillowInv);
+        Object[] bedObjects ={pillow};
+        Inventory bedInv = new Inventory(bedObjects);
         bed = new Entity("bed",bedInv);
 
 
