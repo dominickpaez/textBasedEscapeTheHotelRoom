@@ -24,6 +24,6 @@ public class Entity {
     }
 
     public String getImmediateInventory(){
-        return(inventory.entityToString());
+        return(inventory.toString());
     }
 }
