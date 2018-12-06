@@ -10,7 +10,7 @@ public class EscapeTheRoom {
         Inventory emptyInv = new Inventory();
 
         Entity bed;
-        InventoryItem note1 = new InventoryItem();
+        InventoryItem note1 = new InventoryItem("note #1");
         InventoryItem[] pillowItems = {note1};
         Inventory pillowInv = new Inventory(pillowItems);
         Object pillow = new Object("pillow",pillowInv);
@@ -19,7 +19,7 @@ public class EscapeTheRoom {
         bed = new Entity("bed",bedInv);
 
         Entity stand = new Entity();
-        InventoryItem note2 = new InventoryItem();
+        InventoryItem note2 = new InventoryItem("note #2");
         InventoryItem[] drawerItems = {note2};
         Inventory drawerInv = new Inventory(drawerItems);
         Object drawer = new Object("drawer",drawerInv);
@@ -28,9 +28,9 @@ public class EscapeTheRoom {
         stand = new Entity("Nightstand",standInv);
 
         Entity tvstand = new Entity();
-        InventoryItem socket = new InventoryItem();
-        InventoryItem metalRod = new InventoryItem();
-        InventoryItem extensionCord = new InventoryItem();
+        InventoryItem socket = new InventoryItem("lamp socket");
+        InventoryItem metalRod = new InventoryItem("lamp rod");
+        InventoryItem extensionCord = new InventoryItem("extension cord");
         InventoryItem[] lampItems = {socket, metalRod, extensionCord};
         Inventory lampInv = new Inventory(lampItems);
         Object lamp = new Object("lamp",lampInv);
@@ -51,7 +51,7 @@ public class EscapeTheRoom {
         door = new Entity("Bathroom Door",bathDoorInv);
 
         Entity sink = new Entity();
-        InventoryItem lockBreaker = new InventoryItem();
+        InventoryItem lockBreaker = new InventoryItem("lock breaker");
         InventoryItem[] cupboardItems = {lockBreaker};
         Inventory cupboardInv = new Inventory(cupboardItems);
         Object cupboard = new Object("cupboard",cupboardInv);
@@ -80,6 +80,7 @@ public class EscapeTheRoom {
                 }
 
             }else if(splitted[0].equalsIgnoreCase("Pick") && splitted[1].equalsIgnoreCase("up") ) {
+                if(splitted[3].equalsIgnoreCase(""));
 
             }else if(splitted[0].equalsIgnoreCase("Use")) {
 
