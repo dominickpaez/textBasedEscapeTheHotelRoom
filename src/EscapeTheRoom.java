@@ -80,7 +80,9 @@ public class EscapeTheRoom {
                 }
 
             }else if(splitted[0].equalsIgnoreCase("Pick") && splitted[1].equalsIgnoreCase("up") ) {
-                if(splitted[3].equalsIgnoreCase(""));
+                for(int i = 0;i < NameList.length;i++) {
+                    if(splitted[1].equalsIgnoreCase(entityNameList[i]))
+                        PlayerCommands.interact(entityList[i]);
 
             }else if(splitted[0].equalsIgnoreCase("Use")) {
 
