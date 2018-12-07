@@ -65,6 +65,9 @@ public class EscapeTheRoom {
         String[] objectNameList = {"pillow","drawer","lamp","lock","keycode lock","cupboard"};
         Object[] objectList = {pillow,drawer,lamp,lock,keyCodelock,cupboard};
 
+        String[] inventoryNameList = {"ripped paper","crumpled paper","socket","metal rod","extension cord","lock breaker"};
+        InventoryItem[] inventoryList = {note1,note2,socket,metalRod,extensionCord,lockBreaker};
+
         boolean x = false;
         while (!x){
             System.out.print ("Enter command: ");
