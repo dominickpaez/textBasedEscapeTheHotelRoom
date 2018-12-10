@@ -9,6 +9,11 @@ public class EscapeTheRoom {
         //Initialize objects
         Inventory emptyInv = new Inventory();
 
+        Object empty = new Object("empty",emptyInv);
+        Object[] playerInitialize ={empty,empty,empty,empty,empty,empty,empty};
+        Inventory playerInv = new Inventory(playerInitialize);
+
+
         Entity bed;
         InventoryItem note1 = new InventoryItem("note #1");
         InventoryItem[] pillowItems = {note1};
@@ -65,7 +70,7 @@ public class EscapeTheRoom {
         String[] objectNameList = {"pillow","drawer","lamp","lock","keycode lock","cupboard"};
         Object[] objectList = {pillow,drawer,lamp,lock,keyCodelock,cupboard};
 
-        String[] inventoryNameList = {"ripped paper","crumpled paper","socket","metal rod","extension cord","lock breaker"};
+        String[] inventoryNameList = {"note1","note2","socket","metal rod","extension cord","lock breaker"};
         InventoryItem[] inventoryList = {note1,note2,socket,metalRod,extensionCord,lockBreaker};
 
         boolean x = false;
@@ -83,13 +88,22 @@ public class EscapeTheRoom {
                 }
 
             }else if(splitted[0].equalsIgnoreCase("Pick") && splitted[1].equalsIgnoreCase("up") ) {
-                for(int i = 0;i < NameList.length;i++) {
-                    if(splitted[1].equalsIgnoreCase(entityNameList[i]))
-                        PlayerCommands.interact(entityList[i]);
+                for(int i = 0;i < inventoryNameList.length;i++) {
+                    if (splitted[2].equalsIgnoreCase(inventoryNameList[i]))
+                        PlayerCommands.pickUp(inventoryList[i],playerInv);
+                }
+                System.out.println("Inventory: " + playerInv.toString());
+
 
             }else if(splitted[0].equalsIgnoreCase("Use")) {
 
             }else if(splitted[0].equalsIgnoreCase("Craft")) {
+                for(int i = 0;i < inventoryNameList.length;i++) {
+                    if (splitted[2].equalsIgnoreCase(inventoryNameList[i])){
+                        
+                    }
+
+                }
 
             }else if(splitted[0].equalsIgnoreCase("Quit")) {
                 x = true;

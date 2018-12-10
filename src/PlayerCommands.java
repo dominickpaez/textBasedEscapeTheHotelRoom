@@ -9,4 +9,18 @@ public class PlayerCommands extends EscapeTheRoom {
             System.out.println("invalid input");
         }
     }
+
+    public static void pickUp(InventoryItem x,Inventory y){
+        if(x.getAccessible())
+            y.addItem(x);
+
+    }
+
+    public static void craft(InventoryItem x,InventoryItem y,Inventory z){
+        if(x.getName().equalsIgnoreCase("note #1") && y.getName().equalsIgnoreCase("note #2")){
+            z.removeItem(y);
+            x.setName("Note");
+            System.out.println("When the two notes are put together a string of numbers appears, 1 4 3 0.");
+        }
+    }
 }
