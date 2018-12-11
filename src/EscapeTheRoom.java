@@ -99,8 +99,13 @@ public class EscapeTheRoom {
 
             }else if(splitted[0].equalsIgnoreCase("Craft")) {
                 for(int i = 0;i < inventoryNameList.length;i++) {
-                    if (splitted[2].equalsIgnoreCase(inventoryNameList[i])){
-                        
+                    if (splitted[1].equalsIgnoreCase(inventoryNameList[i])){
+                        for(int y = 0;y < inventoryNameList.length;y++) {
+                            if (splitted[2].equalsIgnoreCase(inventoryNameList[y])) {
+                                PlayerCommands.craft(inventoryList[i],inventoryList[y],playerInv);
+
+                            }
+                        }
                     }
 
                 }
