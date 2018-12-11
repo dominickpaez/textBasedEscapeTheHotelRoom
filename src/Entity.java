@@ -2,11 +2,11 @@ public class Entity {
     private String name;
     private Inventory inventory;
 
-    public Entity(){
+    public Entity() {
         name = "Default";
     }
 
-    public Entity(String n,Inventory i){
+    public Entity(String n, Inventory i) {
         name = n;
         inventory = i;
     }
@@ -23,7 +23,7 @@ public class Entity {
         return (name);
     }
 
-    public String getImmediateInventory(){
-        return(inventory.toString());
+    public String getImmediateInventory() {
+        return (inventory.toString());
     }
 }
