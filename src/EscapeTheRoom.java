@@ -45,7 +45,7 @@ public class EscapeTheRoom {
 
         Entity door = new Entity();
         Object lock = new Object("key lock", emptyInv);
-        Object[] doorObjects = {drawer};
+        Object[] doorObjects = {};
         Inventory doorInv = new Inventory(doorObjects);
         door = new Entity("Front Door", doorInv);
 
@@ -63,6 +63,32 @@ public class EscapeTheRoom {
         Object[] sinkObjects = {cupboard};
         Inventory sinkInv = new Inventory(sinkObjects);
         sink = new Entity("Sink", sinkInv);
+
+        Entity shower = new Entity();
+        Object faucet = new Object("faucet", emptyInv);
+        Object[] showerObjects = {};
+        Inventory showerInv = new Inventory(showerObjects);
+        shower = new Entity("Shower", showerInv);
+
+        Entity toilet = new Entity();
+        Object waterPipe = new Object("waterPipe", emptyInv);
+        Object[] toiletObjects = {};
+        Inventory toiletInv = new Inventory(toiletObjects);
+        toilet = new Entity("Toilet", toiletInv);
+
+        Entity outlet = new Entity();
+        Object[] outletObjects = {};
+        Inventory outletInv = new Inventory(outletObjects);
+        outlet = new Entity("Power Outlet", outletInv);
+
+        Entity safe = new Entity();
+        InventoryItem key = new InventoryItem("key");
+        InventoryItem[] interiorItems = {key};
+        Inventory interiorInv = new Inventory(interiorItems);
+        Object interior = new Object("interior", interiorInv);
+        Object[] safeObjects = {};
+        Inventory safeInv = new Inventory(safeObjects);
+        safe = new Entity("Safe", safeInv);
 
         String[] entityNameList = {"bed", "nightstand", "tvstand", "frontdoor", "bathroomdoor"};
         Entity[] entityList = {bed, stand, tvstand, door, bathroomdoor};
