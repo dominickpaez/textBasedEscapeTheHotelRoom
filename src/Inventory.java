@@ -1,6 +1,5 @@
 public class Inventory {
     private Object[] inv;
-    private int playerInventoryCounter;
 
     public Inventory(){ }
     public Inventory(Object[] x){ inv = x; }
@@ -9,18 +8,25 @@ public class Inventory {
         String x = "";
         for(int i = 0;i < inv.length;i++){
             if(inv[i] == null)
-                x += "empty ";
+                x += "empty, ";
             else {
                 x += (inv[i].toString());
-                x += " ";
+                x += ", ";
             }
         }
         return x;
     }
 
     public void addItem(InventoryItem x){
-        inv[playerInventoryCounter] = x;
-        playerInventoryCounter++;
+        for(int i = 0;i < inv.length;i++){
+            if(inv[i] == (null) ){
+                inv[i] = x;
+                break;
+            } else if(inv[i].toString().equalsIgnoreCase("empty")){
+                inv[i] = x;
+                break;
+            }
+        }
     }
 
     public void removeItem(InventoryItem x){

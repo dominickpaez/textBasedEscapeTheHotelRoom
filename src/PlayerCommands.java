@@ -19,7 +19,6 @@ public class PlayerCommands extends EscapeTheRoom {
     public static void pickUp(InventoryItem x, Inventory y) {
         if (x.getAccessible())
             y.addItem(x);
-
     }
 
     public static void craft(InventoryItem x, InventoryItem y, Inventory z) {
@@ -27,6 +26,12 @@ public class PlayerCommands extends EscapeTheRoom {
             z.removeItem(y);
             x.setName("Note");
             System.out.println("When the two notes are put together a string of numbers appears, 1 4 3 0.");
+            System.out.println("Inventory: " + z.toString());
+        }
+        if (x.getName().equalsIgnoreCase("lamp socket") && y.getName().equalsIgnoreCase("lamp rod")) {
+            z.removeItem(y);
+            x.setName("Improvised Wrench");
+            System.out.println("You were able to fabricate an improvised wrench");
             System.out.println("Inventory: " + z.toString());
         }
     }

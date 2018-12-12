@@ -70,7 +70,7 @@ public class EscapeTheRoom {
         String[] objectNameList = {"pillow", "drawer", "lamp", "lock", "keycode lock", "cupboard"};
         Object[] objectList = {pillow, drawer, lamp, lock, keyCodelock, cupboard};
 
-        String[] inventoryNameList = {"note1", "note2", "socket", "metal rod", "extension cord", "lock breaker"};
+        String[] inventoryNameList = {"note1", "note2", "socket", "metalrod", "extensioncord", "lock breaker"};
         InventoryItem[] inventoryList = {note1, note2, socket, metalRod, extensionCord, lockBreaker};
 
         boolean x = false;
@@ -96,6 +96,9 @@ public class EscapeTheRoom {
 
 
             } else if (splitted[0].equalsIgnoreCase("Use")) {
+                if(splitted[1].equalsIgnoreCase("Note") && splitted[2].equalsIgnoreCase("Bathroom Door")){
+                    System.out.println("The door has been unlocked, you enter the Bathroom to see a;\nSink,Shower,Toilet,a Power Outlet and a Safe");
+                }
 
             } else if (splitted[0].equalsIgnoreCase("Craft")) {
                 for (int i = 0; i < inventoryNameList.length; i++) {
