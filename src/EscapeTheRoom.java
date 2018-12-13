@@ -47,13 +47,13 @@ public class EscapeTheRoom {
         Object lock = new Object("key lock", emptyInv);
         Object[] doorObjects = {};
         Inventory doorInv = new Inventory(doorObjects);
-        door = new Entity("Front Door", doorInv);
+        door = new Entity("Front", doorInv);
 
         Entity bathroomdoor = new Entity();
         Object keyCodelock = new Object("code lock", emptyInv);
         Object[] bathDoorObjects = {keyCodelock};
         Inventory bathDoorInv = new Inventory(bathDoorObjects);
-        door = new Entity("Bathroom Door", bathDoorInv);
+        door = new Entity("Bathroom", bathDoorInv);
 
         Entity sink = new Entity();
         InventoryItem lockBreaker = new InventoryItem("lock breaker");
@@ -93,11 +93,11 @@ public class EscapeTheRoom {
         String[] entityNameList = {"bed", "nightstand", "tvstand", "frontdoor", "bathroomdoor"};
         Entity[] entityList = {bed, stand, tvstand, door, bathroomdoor};
 
-        String[] objectNameList = {"pillow", "drawer", "lamp", "lock", "keycode lock", "cupboard"};
-        Object[] objectList = {pillow, drawer, lamp, lock, keyCodelock, cupboard};
+        String[] objectNameList = {"pillow", "drawer", "lamp", "lock", "keycode lock"};
+        Object[] objectList = {pillow, drawer, lamp, lock, keyCodelock,};
 
-        String[] inventoryNameList = {"note1", "note2", "socket", "metalrod", "extensioncord", "lock breaker"};
-        InventoryItem[] inventoryList = {note1, note2, socket, metalRod, extensionCord, lockBreaker};
+        String[] inventoryNameList = {"note1", "note2", "socket", "metalrod", "extensioncord"};
+        InventoryItem[] inventoryList = {note1, note2, socket, metalRod, extensionCord};
 
         boolean x = false;
         while (!x) {
@@ -124,6 +124,10 @@ public class EscapeTheRoom {
             } else if (splitted[0].equalsIgnoreCase("Use")) {
                 if(splitted[1].equalsIgnoreCase("Note") && splitted[2].equalsIgnoreCase("Bathroom Door")){
                     System.out.println("The door has been unlocked, you enter the Bathroom to see a;\nSink,Shower,Toilet,a Power Outlet and a Safe");
+                    String[] inventoryNameList2 = {"note1", "note2", "socket", "metalrod", "extensioncord", "lock breaker","key"};
+                    InventoryItem[] inventoryList2 = {note1, note2, socket, metalRod, extensionCord, lockBreaker,key};
+                    inventoryNameList = inventoryNameList2;
+                    inventoryList = inventoryList2;
                 }
 
             } else if (splitted[0].equalsIgnoreCase("Craft")) {
@@ -144,7 +148,7 @@ public class EscapeTheRoom {
             } else {
                 System.out.println("Invalid input try again");
             }
-            x = false;
+
         }
     }
 
