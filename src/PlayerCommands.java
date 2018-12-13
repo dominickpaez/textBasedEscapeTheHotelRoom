@@ -1,4 +1,9 @@
+
 public class PlayerCommands extends EscapeTheRoom {
+    /**
+     *
+     * @param x entity
+     */
     public static void interact(Entity x) {
         if(x.getName().equalsIgnoreCase("Front")) {
             System.out.println("Its locked with a key pad lock, look for the code.\nBe sure to use the USE command.");
@@ -8,7 +13,10 @@ public class PlayerCommands extends EscapeTheRoom {
             System.out.println("Inside " + x.getName() + " you found " + x.getImmediateInventory());
         }
     }
-
+    /**
+     * Prints out when you found something and moves it to the inventory or else it's invalid
+     * @param x Object
+     */
     public static void interact(Object x) {
         if (x.getAccessible()) {
             System.out.println("Inside " + x.getName() + " you found " + x.getImmediateInventory());
@@ -16,12 +24,21 @@ public class PlayerCommands extends EscapeTheRoom {
             System.out.println("invalid input");
         }
     }
-
+    /**
+     * X is to get the accessible item and Y is to add item
+     * @param x InventoryItem
+     * @param y Inventory
+     */
     public static void pickUp(InventoryItem x, Inventory y) {
         if (x.getAccessible())
             y.addItem(x);
     }
-
+    /**
+     * The code 
+     * @param x InventoryItem
+     * @param y InventoryItem
+     * @param z Inventory
+     */
     public static void craft(InventoryItem x, InventoryItem y, Inventory z) {
         if (x.getName().equalsIgnoreCase("note #1") && y.getName().equalsIgnoreCase("note #2")) {
             z.removeItem(y);
