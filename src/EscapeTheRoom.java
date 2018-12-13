@@ -124,6 +124,10 @@ public class EscapeTheRoom {
             } else if (splitted[0].equalsIgnoreCase("Use")) {
                 if(splitted[1].equalsIgnoreCase("Note") && splitted[2].equalsIgnoreCase("Bathroom Door")){
                     System.out.println("The door has been unlocked, you enter the Bathroom to see a;\nSink,Shower,Toilet,a Power Outlet and a Safe");
+                    String[] inventoryNameList2 = {"note1", "note2", "socket", "metalrod", "extensioncord", "lock breaker","key"};
+                    InventoryItem[] inventoryList2 = {note1, note2, socket, metalRod, extensionCord, lockBreaker,key};
+                    inventoryNameList = inventoryNameList2;
+                    inventoryList = inventoryList2;
                 }
 
             } else if (splitted[0].equalsIgnoreCase("Craft")) {
@@ -144,7 +148,7 @@ public class EscapeTheRoom {
             } else {
                 System.out.println("Invalid input try again");
             }
-            x = false;
+
         }
     }
 
