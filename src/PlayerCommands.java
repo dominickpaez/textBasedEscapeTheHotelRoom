@@ -8,8 +8,10 @@ public class PlayerCommands extends EscapeTheRoom {
         if(x.getName().equalsIgnoreCase("Front")) {
             System.out.println("Its locked with a key pad lock, look for the code.\nBe sure to use the USE command.");
         }else if(x.getName().equalsIgnoreCase("Bathroom")){
-
-        } else{
+            System.out.println("Its locked with a key lock, look for the key.\nBe sure to use the USE command.");
+        } else if(x.getName().equalsIgnoreCase("Safe")){
+            System.out.println("The safe is locked with a thumbprint, there has to be another way to open it.");
+        }else{
             System.out.println("Inside " + x.getName() + " you found " + x.getImmediateInventory());
         }
     }
@@ -18,7 +20,11 @@ public class PlayerCommands extends EscapeTheRoom {
      * @param x Object
      */
     public static void interact(Object x) {
-        if (x.getAccessible()) {
+        if(x.getName().equalsIgnoreCase("cupboard")) {
+            System.out.println("There is a lock on the cupboard, look for a key to open it.");
+        } else if(x.getName().equalsIgnoreCase("Faucet")){
+            System.out.println("You turn the faucet but no water comes out");
+        }else if (x.getAccessible()) {
             System.out.println("Inside " + x.getName() + " you found " + x.getImmediateInventory());
         } else {
             System.out.println("invalid input");
