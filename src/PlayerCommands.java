@@ -1,9 +1,10 @@
 public class PlayerCommands extends EscapeTheRoom {
     public static void interact(Entity x) {
-        if(x.getName().equals("Bathroom Door") || x.getName().equals("Front Door")) {
-            System.out.println("Its locked,try looking for/using an item to unlock this door\nBe sure to use the USE command.");
-        }
-        else{
+        if(x.getName().equalsIgnoreCase("Front")) {
+            System.out.println("Its locked with a key pad lock, look for the code.\nBe sure to use the USE command.");
+        }else if(x.getName().equalsIgnoreCase("Bathroom")){
+
+        } else{
             System.out.println("Inside " + x.getName() + " you found " + x.getImmediateInventory());
         }
     }
