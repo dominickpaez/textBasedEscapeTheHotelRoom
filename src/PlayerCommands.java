@@ -1,5 +1,5 @@
 
-public class PlayerCommands extends EscapeTheRoom {
+public class PlayerCommands{
     /**
      *
      * @param x entity
@@ -22,8 +22,6 @@ public class PlayerCommands extends EscapeTheRoom {
     public static void interact(Object x) {
         if(x.getName().equalsIgnoreCase("cupboard")) {
             System.out.println("There is a lock on the cupboard, look for a key to open it.");
-        } else if(x.getName().equalsIgnoreCase("Faucet")){
-            System.out.println("You turn the faucet but no water comes out");
         }else if (x.getAccessible()) {
             System.out.println("Inside " + x.getName() + " you found " + x.getImmediateInventory());
         } else {
